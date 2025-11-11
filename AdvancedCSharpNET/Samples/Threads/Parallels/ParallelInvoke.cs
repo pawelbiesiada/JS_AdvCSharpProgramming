@@ -2,7 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace AdvancedCSharp.Samples.Parallels
+namespace AdvancedCSharpNET.Samples.Parallels
 {
     internal class ParallelInvoke
     {

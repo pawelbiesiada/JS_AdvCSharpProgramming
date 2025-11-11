@@ -1,5 +1,5 @@
 ﻿using System;
-namespace AdvancedCSharp.Samples.Patterns
+namespace AdvancedCSharpNET.Samples.Patterns
 {    
     internal class FactoryMethodPattern
     {

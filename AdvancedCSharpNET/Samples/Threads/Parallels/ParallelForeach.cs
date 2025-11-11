@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using System.Threading;
 
-namespace AdvancedCSharp.Samples.Parallels
+namespace AdvancedCSharpNET.Samples.Parallels
 {
     internal class ParallelForeach
     {

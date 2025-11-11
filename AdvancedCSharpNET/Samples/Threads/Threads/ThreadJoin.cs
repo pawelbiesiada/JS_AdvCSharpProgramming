@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
 
-namespace AdvancedCSharp.Samples.Threads
+namespace AdvancedCSharpNET.Samples.Threads
 {
     internal class ThreadJoin
     {

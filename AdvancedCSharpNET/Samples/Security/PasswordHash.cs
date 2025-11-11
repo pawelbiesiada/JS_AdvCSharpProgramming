@@ -2,7 +2,7 @@
 using System.Security.Cryptography;
 using System.Text;
 
-namespace AdvancedCSharp.Samples.Security
+namespace AdvancedCSharpNET.Samples.Security
 {
     internal class PasswordHash
     {

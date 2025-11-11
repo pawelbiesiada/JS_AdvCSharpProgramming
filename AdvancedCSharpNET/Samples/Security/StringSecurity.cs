@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.ComponentModel;
 using System.Runtime.InteropServices;
 
-namespace AdvancedCSharp.Samples.Security
+namespace AdvancedCSharpNET.Samples.Security
 {
     //You should never assign secureString as plain text to a variable otherwise it will be cashed.
     class StringSecurity

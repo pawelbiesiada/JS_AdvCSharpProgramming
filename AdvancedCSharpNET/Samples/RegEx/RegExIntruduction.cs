@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 
-namespace AdvancedCSharp.Samples.RegEx
+namespace AdvancedCSharpNET.Samples.RegEx
 {
     class RegExIntruduction
     {

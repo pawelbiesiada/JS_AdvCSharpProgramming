@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AdvancedCSharp.Samples.Class
+namespace AdvancedCSharpNET.Samples.Class
 {
     public class AdvListClass
     {

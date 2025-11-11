@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AdvancedCSharp.Samples.Patterns.Strategy
+namespace AdvancedCSharpNET.Samples.Patterns.Strategy
 {
     internal class StrategyPattern
     {

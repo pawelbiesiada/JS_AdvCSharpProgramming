@@ -1,4 +1,4 @@
-﻿namespace AdvancedCSharp.Samples.Class.Inheritance
+﻿namespace AdvancedCSharpNET.Samples.Class.Inheritance
 {
     public interface IVehicle
     {

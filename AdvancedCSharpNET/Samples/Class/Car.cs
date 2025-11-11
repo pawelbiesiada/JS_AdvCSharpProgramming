@@ -1,4 +1,4 @@
-﻿namespace AdvancedCSharp.Samples.Class
+﻿namespace AdvancedCSharpNET.Samples.Class
 {
     public class Car
     {
@@ -38,7 +38,7 @@
 
     public class ClassTest
     {
-        public static void Main()
+        static void Main()
         {
             Car c1 = new Car(30);
             Car c2 = new Car(50);

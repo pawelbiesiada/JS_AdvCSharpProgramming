@@ -2,7 +2,7 @@
 using System.Reflection;
 using System.IO;
 
-namespace AdvancedCSharp.Samples.Reflection
+namespace AdvancedCSharpNET.Samples.Reflection
 {
     class ReflectionOverview
     {

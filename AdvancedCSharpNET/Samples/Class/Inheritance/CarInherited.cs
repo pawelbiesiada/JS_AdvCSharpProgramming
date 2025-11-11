@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AdvancedCSharp.Samples.Class.Inheritance
+namespace AdvancedCSharpNET.Samples.Class.Inheritance
 {
     class FamilyCar : Car
     {

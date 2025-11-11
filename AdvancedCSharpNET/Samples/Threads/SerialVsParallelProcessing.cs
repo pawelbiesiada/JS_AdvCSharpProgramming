@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using System.Diagnostics;
 
-namespace AdvancedCSharp.Samples
+namespace AdvancedCSharpNET.Samples
 {
     internal class SerialVsParallelProcessing
     {

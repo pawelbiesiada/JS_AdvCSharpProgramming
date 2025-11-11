@@ -1,6 +1,6 @@
-﻿using AdvancedCSharp.Samples.Class.Inheritance;
+﻿using AdvancedCSharpNET.Samples.Class.Inheritance;
 
-namespace AdvancedCSharp.Samples.Extensions
+namespace AdvancedCSharpNET.Samples.Extensions
 {
     public static class CarExtensionMethods
     {

@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Reflection;
-using AdvancedCSharp.Samples.Reflection;
+using AdvancedCSharpNET.Samples.Reflection;
 
-namespace AdvancedCSharp.Samples.Dynamic
+namespace AdvancedCSharpNET.Samples.Dynamic
 {
     class DynamicPresentation
     {

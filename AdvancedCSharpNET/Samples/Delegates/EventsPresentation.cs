@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AdvancedCSharp.Samples.Delegates
+namespace AdvancedCSharpNET.Samples.Delegates
 {
     class MessageEventArgs : EventArgs
     {

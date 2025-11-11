@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.IO;
 
-namespace AdvancedCSharp.Samples.Debugging
+namespace AdvancedCSharpNET.Samples.Debugging
 {
     internal class DebugPresentation
     {

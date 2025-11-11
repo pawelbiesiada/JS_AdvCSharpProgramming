@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace AdvancedCSharp.Samples.Debugging
+namespace AdvancedCSharpNET.Samples.Debugging
 {
     internal class StackTraceSample
     {

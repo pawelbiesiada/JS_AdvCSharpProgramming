@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
 
-namespace AdvancedCSharp.Samples
+namespace AdvancedCSharpNET.Samples
 {
     internal class SerialVsAsynchronousProcessing
     {

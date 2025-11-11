@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 
-namespace AdvancedCSharp.Samples.Extensions
+namespace AdvancedCSharpNET.Samples.Extensions
 {
     public class Ext
     {

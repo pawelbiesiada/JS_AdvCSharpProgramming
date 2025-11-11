@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AdvancedCSharp.Samples.Delegates
+namespace AdvancedCSharpNET.Samples.Delegates
 {
     public delegate int IntOperation(int x, int y);
 

@@ -2,7 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace AdvancedCSharp.Samples.Tasks
+namespace AdvancedCSharpNET.Samples.Tasks
 {
     internal class AsyncAwaitPresentation
     {

@@ -2,7 +2,7 @@
 using System.Text;
 using System.Security.Cryptography;
 
-namespace AdvancedCSharp.Samples.Security
+namespace AdvancedCSharpNET.Samples.Security
 {
     class RSAEncryption
     {

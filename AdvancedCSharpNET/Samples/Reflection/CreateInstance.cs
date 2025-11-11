@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Reflection;
 
-namespace AdvancedCSharp.Samples.Reflection
+namespace AdvancedCSharpNET.Samples.Reflection
 {
     class CreateInstance
     {

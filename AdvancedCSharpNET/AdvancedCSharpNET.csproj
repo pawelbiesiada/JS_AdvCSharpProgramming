@@ -3,8 +3,8 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net9.0</TargetFramework>
-    <RootNamespace>AdvancedCSharp</RootNamespace>
-    <StartupObject>AdvancedCSharp.Samples.Delegates.DelegateOverview</StartupObject>
+    <RootNamespace>AdvancedCSharpNET</RootNamespace>
+    <StartupObject>AdvancedCSharpNET.Program</StartupObject>
   </PropertyGroup>
 
 </Project>

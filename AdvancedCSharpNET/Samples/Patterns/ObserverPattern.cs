@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace AdvancedCSharp.Samples.Patterns
+namespace AdvancedCSharpNET.Samples.Patterns
 {
     class ObserverPattern
     {

@@ -2,7 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace AdvancedCSharp.Samples.Threads.Tasks
+namespace AdvancedCSharpNET.Samples.Threads.Tasks
 {
     class TaskCancellationToken
     {

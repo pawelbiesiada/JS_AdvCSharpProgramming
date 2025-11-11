@@ -3,7 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Diagnostics;
 
-namespace AdvancedCSharp.Samples.Parallels
+namespace AdvancedCSharpNET.Samples.Parallels
 {
     internal class PlinqPresentation
     {
