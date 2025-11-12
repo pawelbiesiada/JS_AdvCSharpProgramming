@@ -8,7 +8,7 @@ namespace AdvancedCSharpNET.Samples.Reflection
     {
         static void Main(string[] args)
         {
-            var updater = new VersionUpdate();
+            var updater = new VersionUpdate_2_0();
             Console.WriteLine("Updating english profile:");
             updater.InvokeMethods(UpdateProfile.English);
 
@@ -21,7 +21,7 @@ namespace AdvancedCSharpNET.Samples.Reflection
         }
     }
 
-    [AttributeUsage(AttributeTargets.Method, Inherited = false, AllowMultiple = true)]
+    [AttributeUsage(AttributeTargets.Method|AttributeTargets.Property, Inherited = false, AllowMultiple = true)]
     public class UpdateMethodAttribute : Attribute
     {
         public UpdateMethodAttribute(int sequence, params UpdateProfile[] profiles)
@@ -41,7 +41,7 @@ namespace AdvancedCSharpNET.Samples.Reflection
         English
     }
 
-    public class VersionUpdate
+    public class VersionUpdate_2_0
     {
         [UpdateMethod(1, UpdateProfile.English, UpdateProfile.German)]
         private void UpdateConfigs()
@@ -62,7 +62,7 @@ namespace AdvancedCSharpNET.Samples.Reflection
         }
 
         [UpdateMethod(4, UpdateProfile.German)]
-        [UpdateMethod(9, UpdateProfile.English)]
+        [UpdateMethodAttribute(9, UpdateProfile.English)]
         private void InstallWordChecker()
         {
             Console.WriteLine("Checker installed");
@@ -72,7 +72,8 @@ namespace AdvancedCSharpNET.Samples.Reflection
         {
             // get methods with specific attribute only
             var updateMethods =
-                this.GetType().GetMethods(BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Instance)
+                this.GetType()
+                .GetMethods(BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Instance)
                     .Where(m => m.GetCustomAttributes(typeof(UpdateMethodAttribute), false).Length > 0)
                     .SelectMany(m => m.GetCustomAttributes(typeof(UpdateMethodAttribute), false)
                                 .Cast<UpdateMethodAttribute>()

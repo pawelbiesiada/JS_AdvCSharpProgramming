@@ -6,7 +6,7 @@ using System.Reflection;
 
 namespace AdvancedCSharpNET.Samples.Extensions
 {
-    public class Ext
+    public sealed class Ext
     {
         static void Main()
         {
@@ -23,11 +23,20 @@ namespace AdvancedCSharpNET.Samples.Extensions
             //list.Count == 1;
             //newerList.Count == 2;
 
+            list = null;
+
+            list.AddOneElement("sdfsd");  
+            //ExtensionMethods.AddOneElement(list, "sdfsd");
+
+            newerList.AddDefaultElement();
         }
     }
     public static class ExtensionMethods
     {
-
+        public static void AddDefaultElement<T>(this IList<T> items)
+        {
+            items.Add(default(T));
+        }
 
         public static void AddOneElement<T>(this List<T> items, T newelement)
         {

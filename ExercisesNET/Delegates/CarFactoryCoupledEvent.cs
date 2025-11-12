@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Exercises.Delegates.Sample.Couple
+namespace Exercises.Delegates.Sample.Event
 {
-    class CarFactoryCouple
+    class CarFactoryEvent
     {
         static void Main()
         {
@@ -28,23 +28,26 @@ namespace Exercises.Delegates.Sample.Couple
     {
         public string Name { get; private set; }
 
-        private readonly CarFactory _carFactory;
+        private Func<int> _maxLimit;
 
-        public Car(string name, CarFactory carFactory)
+        public event EventHandler CountCarUsage;
+
+        public Car(string name, Func<int> maxLimit)
         {
-            _carFactory = carFactory;
+            _maxLimit = maxLimit;
             Name = name;
         }
 
         public void Drive()
         {
-            _carFactory.TotalUsageCount++;
+            //_carFactory.TotalUsageCount++;  use event here
+            CountCarUsage.Invoke(this, new EventArgs());
             AccelerateAndDrive();
         }
 
         private void AccelerateAndDrive()
         {
-            var maxSpeed = _carFactory.MaxSpeedLimit;
+            var maxSpeed = _maxLimit();
             Console.WriteLine("{0} speed is {1}", Name, maxSpeed);
         }
     }
@@ -62,7 +65,10 @@ namespace Exercises.Delegates.Sample.Couple
 
         public Car CreateCar(string carName)
         {
-            return new Car(carName, this);
+            var car = new Car(carName, () => MaxSpeedLimit);
+            car.CountCarUsage += (obj, e) => TotalUsageCount++;
+
+            return car;
         }
     }
 }

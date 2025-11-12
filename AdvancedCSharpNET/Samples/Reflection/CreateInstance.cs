@@ -6,12 +6,14 @@ namespace AdvancedCSharpNET.Samples.Reflection
 {
     class CreateInstance
     {
-        public const string SampleClass = "AdvancedCSharp.Samples.Reflection.SampleClass";
-        public const string MyGenericClass = "AdvancedCSharp.Samples.Reflection.MyGeneric`1";
+        public const string SampleClass = "AdvancedCSharpNET.Samples.Reflection.SampleClass";
+        public const string MyGenericClass = "AdvancedCSharpNET.Samples.Reflection.MyGeneric`1";
 
         static void Main()
         {
             var assembly = Assembly.GetExecutingAssembly();
+
+
             //object initialization
             object sampleClassObject = assembly.CreateInstance(SampleClass, false,
                 BindingFlags.ExactBinding,
@@ -20,11 +22,18 @@ namespace AdvancedCSharpNET.Samples.Reflection
 
             //generic type initialization
             var genericType = assembly.GetType("AdvancedCSharp.Samples.Reflection.VersionUpdate");
-            
+
             //var genericTypeReadyToCreate = genericType.MakeGenericType(classType);
             //var obj = Activator.CreateInstance(genericTypeReadyToCreate);
 
             //Invokin a method via Reflection
+            dynamic sampleClass = sampleClassObject;
+
+            int result = sampleClass.Sum(10);
+
+            sampleClass.sjdfjaroiugfjasdlfjas("sdfasdf", 1000);
+
+
             MethodInfo sum = classType.GetMethod("Sum", new Type[] { typeof(Int32) });
             object ret = sum.Invoke(sampleClassObject, new object[] { 10 }); 
             Console.WriteLine("Sum returned {0}.", ret); // 2+0+10=12   _fieldFactor + PropertyFactor + parameter
