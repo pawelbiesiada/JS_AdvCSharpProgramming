@@ -8,6 +8,7 @@ namespace AdvancedCSharpNET.Samples.Threads
         private static int _commonCounter;
         private static int _thread1Counter;
         private static int _thread2Counter;
+        private readonly static object _locker = new object();
 
         private static void Main()
         {
@@ -16,7 +17,7 @@ namespace AdvancedCSharpNET.Samples.Threads
             _thread2Counter = 0;
 
             var t1 = new Thread(Increment1);
-            var t2= new Thread(Increment2);
+            var t2 = new Thread(Increment2);
             t1.Start();
             t2.Start();
 
@@ -34,7 +35,13 @@ namespace AdvancedCSharpNET.Samples.Threads
         {
             while (_commonCounter < 10_000_000)
             {
-                _commonCounter++;
+                lock(_locker)
+                {
+                    if (_commonCounter >= 10_000_000)
+                        break;
+                    _commonCounter++;
+
+                }
                 _thread1Counter++;
             }
         }
@@ -42,7 +49,13 @@ namespace AdvancedCSharpNET.Samples.Threads
         {
             while (_commonCounter < 10_000_000)
             {
-                _commonCounter++;
+                lock (_locker)
+                {
+                    if (_commonCounter >= 10_000_000)
+                        break;
+                    _commonCounter++;
+
+                }
                 _thread2Counter++;
             }
         }
