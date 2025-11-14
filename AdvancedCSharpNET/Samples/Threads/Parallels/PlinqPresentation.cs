@@ -32,7 +32,7 @@ namespace AdvancedCSharpNET.Samples.Parallels
                 .Where(n => n % 3 == 0)
                 //.AsParallel() //why not at this place
                 .OrderByDescending(n => n).ToArray();
-            Console.WriteLine(string.Format("Found {0} numbers asynchronously that match query in {1}ms!",
+            Console.WriteLine(string.Format("Found {0} numbers parallely that match query in {1}ms!",
             modThreeIsZeroAsync.Count(), stopwatch.ElapsedMilliseconds));
             stopwatch.Stop();
         }

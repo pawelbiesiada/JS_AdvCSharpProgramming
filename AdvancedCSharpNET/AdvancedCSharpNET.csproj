@@ -4,7 +4,7 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net9.0</TargetFramework>
     <RootNamespace>AdvancedCSharpNET</RootNamespace>
-    <StartupObject>AdvancedCSharpNET.Samples.Parallels.PlinqPresentation</StartupObject>
+    <StartupObject>AdvancedCSharpNET.Samples.RegEx.RegExIntruduction</StartupObject>
     <SignAssembly>True</SignAssembly>
   </PropertyGroup>
 
